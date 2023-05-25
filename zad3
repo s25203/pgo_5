@@ -1,0 +1,60 @@
+abstract class Animal {
+    public void sleep() {
+        System.out.println("Zwierzę śpi.");
+    }
+
+    public abstract void makeNoise();
+
+    public void roam() {
+        System.out.println("Zwierzę przemieszcza się.");
+    }
+}
+
+class Lion extends Animal {
+    @Override
+    public void makeNoise() {
+        System.out.println("Lew ryczy.");
+    }
+}
+
+class Cat extends Animal {
+    @Override
+    public void makeNoise() {
+        System.out.println("Kot miauczy.");
+    }
+}
+
+class Wolf extends Animal {
+    @Override
+    public void makeNoise() {
+        System.out.println("Wilk wyje.");
+    }
+}
+
+class Dog extends Animal {
+    @Override
+    public void makeNoise() {
+        System.out.println("Pies szczeka.");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Animal lion = new Lion();
+        Animal cat = new Cat();
+        Animal wolf = new Wolf();
+        Animal dog = new Dog();
+
+        lion.sleep();
+        lion.makeNoise();
+
+        cat.sleep();
+        cat.makeNoise();
+
+        wolf.sleep();
+        wolf.makeNoise();
+
+        dog.sleep();
+        dog.makeNoise();
+    }
+}
